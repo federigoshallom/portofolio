@@ -1,0 +1,11 @@
+[
+  {
+    "id": "coffee-sales-dashboard",
+    "title": "Coffee Sales Dashboard",
+    "description": "An interactive dashboard tracking coffee sales across roast types, sizes, and countries.",
+    "details": "This dashboard tracks coffee sales performance across roast type, size, and region.\n\nFilters cover order date, roast type (dark, light, medium), size (0.2kg to 2.5kg), and loyalty card status, so the view can be narrowed to any segment.\n\nThe main views cover total sales over time by variety (Arabica, Excelsa, Liberica, Robusta), sales by country, and the top 5 customers by revenue.",
+    "tools": "Excel",
+    "image": "images/coffee-sales-dashboard.jpg",
+    "link": ""
+  }
+]

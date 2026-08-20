@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Project — Admin</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <span class="logo">FM</span>
+  <nav>
+    <a href="index.html">← Back to site</a>
+  </nav>
+</header>
+
+<main>
+  <section class="admin-wrap">
+    <span class="section-tag">Add a project</span>
+    <p class="about-text admin-intro">
+      Fill this in like a blog post. If you've connected GitHub below, hitting Publish pushes it
+      straight to your live site. If not, Publish will just show you the entry to copy in yourself.
+    </p>
+
+    <details class="github-panel" id="githubPanel">
+      <summary>GitHub connection <span id="connStatus" class="conn-status">— not connected</span></summary>
+      <div class="github-fields">
+        <label>GitHub username
+          <input type="text" id="ghOwner" placeholder="federigoshallom">
+        </label>
+        <label>Repository name
+          <input type="text" id="ghRepo" placeholder="my-portfolio">
+        </label>
+        <label>Branch
+          <input type="text" id="ghBranch" placeholder="main" value="main">
+        </label>
+        <label>Personal access token
+          <input type="password" id="ghToken" placeholder="github_pat_...">
+        </label>
+        <p class="muted small">
+          Generate a fine-grained token at
+          <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a>
+          scoped only to this repo, with <strong>Contents: Read and write</strong> permission.
+          The token is stored only in this browser (localStorage) and sent only to api.github.com.
+        </p>
+        <button type="button" class="btn-secondary" id="saveGh">Save connection</button>
+      </div>
+    </details>
+
+    <form id="projectForm" class="project-form">
+      <label>Title
+        <input type="text" id="fTitle" required placeholder="Coffee Sales Dashboard">
+      </label>
+
+      <label>Short description <span class="muted small">(shown on the project card)</span>
+        <textarea id="fDescription" rows="2" required placeholder="One or two sentences."></textarea>
+      </label>
+
+      <label>Full details <span class="muted small">(shown on the project page — leave a blank line between paragraphs)</span>
+        <textarea id="fDetails" rows="6" placeholder="Tell the full story of the project."></textarea>
+      </label>
+
+      <label>Tools <span class="muted small">(comma separated)</span>
+        <input type="text" id="fTools" placeholder="Excel, Power BI">
+      </label>
+
+      <label>Project link <span class="muted small">(optional)</span>
+        <input type="url" id="fLink" placeholder="https://github.com/federigoshallom/...">
+      </label>
+
+      <div class="image-toggle">
+        <label><input type="radio" name="imgMode" value="upload" checked> Upload image</label>
+        <label><input type="radio" name="imgMode" value="url"> Use image URL</label>
+      </div>
+      <label id="imgUploadWrap">
+        <input type="file" id="fImageFile" accept="image/*">
+      </label>
+      <label id="imgUrlWrap" style="display:none;">
+        <input type="url" id="fImageUrl" placeholder="https://...">
+      </label>
+      <p class="muted small">Large uploaded images make your repo heavier — resize/compress screenshots before uploading when you can.</p>
+
+      <button type="submit" class="btn-primary">Publish project</button>
+    </form>
+
+    <div id="status" class="status"></div>
+    <div id="fallback" class="fallback" style="display:none;">
+      <p><strong>Copy this into projects.json</strong> (add it inside the square brackets, separated by a comma from the existing entries):</p>
+      <textarea id="fallbackCode" rows="10" readonly></textarea>
+      <p class="muted small">If you chose "Upload image," also save the image file into your <code>images/</code> folder using the filename shown in the code.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Federigo Mamahit</span>
+  <a href="index.html">Back to site</a>
+</footer>
+
+<script src="admin.js"></script>
+</body>
+</html>
