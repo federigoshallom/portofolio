@@ -7,5 +7,14 @@
     "tools": "Excel",
     "image": "images/coffee-sales-dashboard.jpg",
     "link": ""
+  },
+  {
+    "id": "bike-sales-dashboard",
+    "title": "Bike Sales Dashboard",
+    "description": "This interactive Bike Sales Dashboard analyzes customer demographics and purchasing behavior to uncover key drivers behind sales. It highlights that the primary buyers are middle-aged, higher-income individuals with short daily commutes under one mile.",
+    "details": "This Bike Sales Dashboard is an interactive data visualization project designed to analyze customer demographics and purchasing behavior to identify key drivers behind bike sales. By examining income levels, age brackets, and commute distances alongside interactive filters for marital status, region, and education, the dashboard reveals that the primary target customer is a middle-aged, higher-income individual with a short daily commute of under one mile.",
+    "tools": "Excel",
+    "image": "images/bike-sales-dashboard.jpg",
+    "link": ""
   }
 ]
