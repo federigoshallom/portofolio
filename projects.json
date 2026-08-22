@@ -16,5 +16,14 @@
     "tools": "Excel",
     "image": "images/bike-sales-dashboard.jpg",
     "link": ""
+  },
+  {
+    "id": "velmora-sales-analysis-dashboard",
+    "title": "Velmora Sales Analysis & Dashboard",
+    "description": "Membersihkan dan menganalisis data penjualan setahun dengan Python, lalu memvisualisasikannya jadi dashboard interaktif di Power BI untuk perusahaan retail fiksional Velmora.",
+    "details": "Assessment Data Analyst dari Intern2Grow: membersihkan data penjualan mentah dengan Python/Pandas, menjawab 7 pertanyaan bisnis, lalu membangun dashboard Power BI untuk memvisualisasikan hasilnya.\n\nProses cleaning mencakup perbaikan typo pada nama kategori (Clohting → Clothing, Bgas → Bags, Shoeses → Shoes), normalisasi whitespace, pengisian nilai kosong, dan penghapusan data duplikat.\n\nHasil analisis: total revenue setahun $759.130, dengan Smartphone sebagai produk dengan revenue tertinggi ($434.400) dan Electronics sebagai kategori dengan revenue tertinggi ($516.080). Rata-rata harga produk $211,03, dengan total 5.341 unit terjual dan rata-rata revenue $2.062,85 per transaksi.\n\nDashboard Power BI menampilkan temuan ini secara visual: empat KPI utama di bagian atas, breakdown revenue per kategori dan produk, serta distribusi revenue per kuartal yang menunjukkan performa relatif merata sepanjang tahun (sekitar 24-26% per kuartal).",
+    "tools": "Python, Pandas, Power BI",
+    "image": "images/velmora-sales-analysis-dashboard.png",
+    "link": "https://github.com/federigoshallom/sales-data-analysis"
   }
 ]
